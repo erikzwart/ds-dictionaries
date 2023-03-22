@@ -1,0 +1,714 @@
+dictionary.name: chemicals_ath
+dictionary.version: 1_1
+dictionary.type: trimester_rep
+Variables: |
+  - name: row_id
+    valueType: integer
+    unit: numeric
+    label: Unique identifer for the row in Opal
+  - name: child_id
+    valueType: text
+    unit: .na.character
+    label: Unique identifer for the child
+  - name: age_trimester
+    valueType: integer
+    unit: numeric
+    label: Age of the child in trimesters
+  - name: m_mep_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MEP  trimester levels
+  - name: m_mep_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MEP in  trimester
+  - name: m_mibp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MiBP  trimester levels
+  - name: m_mibp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MiBP in  trimester
+  - name: m_mnbp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MnBP  trimester levels
+  - name: m_mnbp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MnBP in  trimester
+  - name: m_mbzp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MBzP  trimester levels
+  - name: m_mbzp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MBzP in  trimester
+  - name: m_mehp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MEHP  trimester levels
+  - name: m_mehp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MEHP in  trimester
+  - name: m_mehhp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MEHHP  trimester levels
+  - name: m_mehhp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MEHHP in  trimester
+  - name: m_meohp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MEOHP  trimester levels
+  - name: m_meohp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MEOHP in  trimester
+  - name: m_mecpp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MECPP  trimester levels
+  - name: m_mecpp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MECPP in  trimester
+  - name: m_mmchp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MMCHP  trimester levels
+  - name: m_mmchp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MMCHP in  trimester
+  - name: m_ohminp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine oh_MiNP  trimester levels
+  - name: m_ohminp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine oh_MiNP in  trimester
+  - name: m_oxominp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine oxo_MiNP  trimester levels
+  - name: m_oxominp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine oxo_MiNP in  trimester
+  - name: m_cxminp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine cx_MiNP  trimester levels
+  - name: m_cxminp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine cx_MiNP in  trimester
+  - name: m_ohmphp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine oh_MPHP  trimester levels
+  - name: m_ohmphp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine oh_MPHP in  trimester
+  - name: m_ohminch_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine oh_MiNCH  trimester levels
+  - name: m_ohminch_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine oh_MiNCH in  trimester
+  - name: m_oxominch_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine oxo_MiNCH  trimester levels
+  - name: m_oxominch_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine oxo_MiNCH in  trimester
+  - name: m_mnpep_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MnPeP  trimester levels
+  - name: m_mnpep_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MnPeP in  trimester
+  - name: m_mchp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MCHP  trimester levels
+  - name: m_mchp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MCHP in  trimester
+  - name: m_mnop_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine MnOP  trimester levels
+  - name: m_mnop_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine MnOP in  trimester
+  - name: m_mmp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine mMP  trimester levels
+  - name: m_mmp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine mMP in  trimester
+  - name: m_mhxp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine mHxP  trimester levels
+  - name: m_mhxp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine mHxP in  trimester
+  - name: m_mhpp_raw_t
+    valueType: decimal
+    unit: µg/ml
+    label: Maternal urine mHpP  trimester levels
+  - name: m_mhpp_lod_t
+    valueType: decimal
+    unit: µg/ml
+    label: Limit of detection of maternal urine mHpP in  trimester
+  - name: m_bpa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine BPA  trimester levels
+  - name: m_bpa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine BPA in  trimester
+  - name: m_bps_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine BPS  trimester levels
+  - name: m_bps_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine BPS in  trimester
+  - name: m_bpf_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine BPF  trimester levels
+  - name: m_bpf_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine BPF in  trimester
+  - name: m_mepa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine MEPA  trimester levels
+  - name: m_mepa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine MEPA in  trimester
+  - name: m_etpa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine ETPA  trimester levels
+  - name: m_etpa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine ETPA in  trimester
+  - name: m_prpa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine PRPA  trimester levels
+  - name: m_prpa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine PRPA in  trimester
+  - name: m_bupa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine BUPA  trimester levels
+  - name: m_bupa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine BUPA in  trimester
+  - name: m_oxbe_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine OXBE  trimester levels
+  - name: m_oxbe_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine OXBE in  trimester
+  - name: m_trcs_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine TRCS  trimester levels
+  - name: m_trcs_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine TRCS in  trimester
+  - name: m_pfhxs_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   PFHxS  trimester levels
+  - name: m_pfhxs_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   PFHxS in  trimester
+  - name: m_pfhps_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   PFHpS  trimester levels
+  - name: m_pfhps_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   PFHpS in  trimester
+  - name: m_pfos_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   PFOS  trimester levels
+  - name: m_pfos_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   PFOS in  trimester
+  - name: m_pfoa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   PFOA  trimester levels
+  - name: m_pfoa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   PFOA in  trimester
+  - name: m_pfna_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   PFNA  trimester levels
+  - name: m_pfna_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   PFNA in  trimester
+  - name: m_pfda_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   PFDA  trimester levels
+  - name: m_pfda_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   PFDA in  trimester
+  - name: m_pfunda_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   PFUnDA  trimester levels
+  - name: m_pfunda_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   PFUnDA in  trimester
+  - name: m_creatinine_raw_t
+    valueType: decimal
+    unit: g/L
+    label: Maternal urine Creatinine  trimester levels
+  - name: m_creatinine_lod_t
+    valueType: decimal
+    unit: g/L
+    label: Limit of detection of maternal urine Creatinine in  trimester
+  - name: m_pcb118_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal  PCB_118  trimester levels
+  - name: m_pcb118_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal  PCB_118 in  trimester
+  - name: m_pcb138_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   PCB_138  trimester levels
+  - name: m_pcb138_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   PCB_138 in  trimester
+  - name: m_pcb153_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   PCB_153  trimester levels
+  - name: m_pcb153_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   PCB_153 in  trimester
+  - name: m_pcb170_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   PCB_170  trimester levels
+  - name: m_pcb170_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   PCB_170 in  trimester
+  - name: m_pcb180_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   PCB_180  trimester levels
+  - name: m_pcb180_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   PCB_180 in  trimester
+  - name: m_ddt_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   DDT  trimester levels
+  - name: m_ddt_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   DDT in  trimester
+  - name: m_dde_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   DDE  trimester levels
+  - name: m_dde_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   DDE in  trimester
+  - name: m_hcb_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   HCB  trimester levels
+  - name: m_hcb_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   HCB in  trimester
+  - name: m_hch_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   HCH  trimester levels
+  - name: m_hch_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   HCH in  trimester
+  - name: m_pbde47_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   PBDE_47  trimester levels
+  - name: m_pbde47_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   PBDE_47 in  trimester
+  - name: m_pbde153_raw_t
+    valueType: decimal
+    unit: pg/g
+    label: Maternal   PBDE_153  trimester levels
+  - name: m_pbde153_lod_t
+    valueType: decimal
+    unit: pg/g
+    label: Limit of detection of maternal   PBDE_153 in  trimester
+  - name: m_dmp_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine DMP  trimester levels
+  - name: m_dmp_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine DMP in  trimester
+  - name: m_dmtp_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine DMTP  trimester levels
+  - name: m_dmtp_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine DMTP in  trimester
+  - name: m_dmdtp_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine DMDTP  trimester levels
+  - name: m_dmdtp_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine DMDTP in  trimester
+  - name: m_dep_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine DEP  trimester levels
+  - name: m_dep_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine DEP in  trimester
+  - name: m_detp_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine DETP  trimester levels
+  - name: m_detp_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine DETP in  trimester
+  - name: m_dedtp_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine DEDTP  trimester levels
+  - name: m_dedtp_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine DEDTP in  trimester
+  - name: m_hg_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal  Hg  trimester levels
+  - name: m_hg_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal  Hg in  trimester
+  - name: m_cd_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Cd  trimester levels
+  - name: m_cd_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Cd in  trimester
+  - name: m_pb_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Pb  trimester levels
+  - name: m_pb_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Pb in  trimester
+  - name: m_se_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Se  trimester levels
+  - name: m_se_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Se in  trimester
+  - name: m_mn_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Mn  trimester levels
+  - name: m_mn_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Mn in  trimester
+  - name: m_zn_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Zn  trimester levels
+  - name: m_zn_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Zn in  trimester
+  - name: m_as_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   As  trimester levels
+  - name: m_as_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   As in  trimester
+  - name: m_tl_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Tl  trimester levels
+  - name: m_tl_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Tl in  trimester
+  - name: m_co_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Co  trimester levels
+  - name: m_co_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Co in  trimester
+  - name: m_cu_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Cu  trimester levels
+  - name: m_cu_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Cu in  trimester
+  - name: m_mo_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Mo  trimester levels
+  - name: m_mo_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Mo in  trimester
+  - name: m_cs_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Cs  trimester levels
+  - name: m_cs_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Cs in  trimester
+  - name: m_na_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Na  trimester levels
+  - name: m_na_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Na in  trimester
+  - name: m_k_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   K  trimester levels
+  - name: m_k_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   K in  trimester
+  - name: m_mg_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal   Mg  trimester levels
+  - name: m_mg_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal   Mg in  trimester
+  - name: m_cotinine_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Cotinine  trimester levels
+  - name: m_cotinine_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Cotinine in  trimester
+  - name: m_benzoapyrene_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Benzo(a)pyrene  trimester levels
+  - name: m_benzoapyrene_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Benzo(a)pyrene in  trimester
+  - name: m_chrysene_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Chrysene  trimester levels
+  - name: m_chrysene_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Chrysene in  trimester
+  - name: m_fluorene_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Fluorene  trimester levels
+  - name: m_fluorene_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Fluorene in  trimester
+  - name: m_naphthalene_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Naphthalene  trimester levels
+  - name: m_naphthalene_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Naphthalene in  trimester
+  - name: m_phenanthrene_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Phenanthrene  trimester levels
+  - name: m_phenanthrene_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Phenanthrene in  trimester
+  - name: m_pyrene_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Pyrene  trimester levels
+  - name: m_pyrene_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Pyrene in  trimester
+  - name: m_phenoxyacetic_acid_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Phenoxyacetic acid  trimester levels
+  - name: m_phenoxyacetic_acid_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Phenoxyacetic acid in  trimester
+  - name: m_maa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine MAA  trimester levels
+  - name: m_maa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine MAA in  trimester
+  - name: m_meaa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine MEAA  trimester levels
+  - name: m_meaa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine MEAA in  trimester
+  - name: m_eaa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine EAA  trimester levels
+  - name: m_eaa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine EAA in  trimester
+  - name: m_eeaa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine EEAA  trimester levels
+  - name: m_eeaa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine EEAA in  trimester
+  - name: m_2mpa_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine 2_MPA  trimester levels
+  - name: m_2mpa_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine 2_MPA in  trimester
+  - name: m_chlorphyrifos_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Chlorphyrifos  trimester levels
+  - name: m_chlorphyrifos_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Chlorphyrifos in  trimester
+  - name: m_pyrethroids_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Pyrethroids  trimester levels
+  - name: m_pyrethroids_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Pyrethroids in  trimester
+  - name: m_boscalid_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Boscalid  trimester levels
+  - name: m_boscalid_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Boscalid in  trimester
+  - name: m_imazalil_raw_t
+    valueType: decimal
+    unit: µg/L
+    label: Maternal urine Imazalil  trimester levels
+  - name: m_imazalil_lod_t
+    valueType: decimal
+    unit: µg/L
+    label: Limit of detection of maternal urine Imazalil in  trimester
+Categories: |
+  []
