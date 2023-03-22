@@ -2,9 +2,10 @@
 # And add dictionary settings.
 library(readxl)
 
+dictionary_project <- "athlete-project"
 dictionary_name <- "chemicals_ath"
 dictionary_version <- "1_1"
-dictionary_type <- "yearly_rep"
+dictionary_type <- "trimester_rep"
 
 excel_file <- paste0(
   "./dictionaries/", dictionary_name, "/", dictionary_version, "/", 
@@ -27,6 +28,7 @@ categories <- readxl::read_excel(
 yaml::write_yaml(
   data.frame(
     dictionary = data.frame(
+      project = dictionary_project,
       name = dictionary_name,
       version = dictionary_version,
       type = dictionary_type
